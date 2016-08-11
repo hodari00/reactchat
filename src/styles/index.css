@@ -1,2 +1,45 @@
-/* Application specific CSS */
+footer {
+  color: white;
+  position: fixed;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 130px;
+}
+footer .input-field input,
+button {
+  border-color: #FFFFFF;
+}
+.chip {
+  font-style: italic;
+}
+
+/* ChatHistory styles */
+.collection {
+ margin-bottom:130px;
+ margin-top: -1px;
+}
+.message-date {
+  color: #585858;
+}
+body {
+  background: #EEEEEE;
+}
+
+#root {
+	width: 80%;
+	display: inline-block;
+}
+
+#users {
+	padding-left: 10px;
+	width: 20%;
+	display: inline-block;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: #fff;
+}
 

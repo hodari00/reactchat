@@ -1,29 +1,27 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-function mapStateToProps(/* state */) {
-  return {
-    // TODO: Add state to be mapped to props
-  };
-}
-
-function mapDispatchToProps(/* dispatch */) {
-  return {
-    // TODO: Add actions to be mapped to props
-  };
-}
+import UsersBlock from '../components/UsersBlock';
+import ChatInput from '../components/ChatInput';
+import ChatHistory from '../components/ChatHistory';
 
 class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello World!</h1>
-      </div>
-    );
-  }
+	render(){
+		const { sendMessage, state } = this;
+	  	return (
+	    	<div>
+	    		<UsersBlock userID={ state.userID } />
+	    		<ChatHistory history={ state.history } />
+	    		<ChatInput userID={ state.userID } sendMessage={ sendMessage } />
+	    	</div>
+	  	);
+	}
+
+	state = {
+    userID: Math.round(Math.random() * 100),
+    history: [],
+  };
+  sendMessage = (message) => this.setState({ 
+      history: this.state.history.concat(message) 
+    })
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(App);
+export default App;
