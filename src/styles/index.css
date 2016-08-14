@@ -13,6 +13,8 @@ button {
 }
 .chip {
   font-style: italic;
+  min-width: 51%;
+  margin-bottom: 20px;
 }
 
 /* ChatHistory styles */

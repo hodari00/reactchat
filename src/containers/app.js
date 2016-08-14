@@ -8,7 +8,7 @@ class App extends React.Component {
 		const { sendMessage, state } = this;
 	  	return (
 	    	<div>
-	    		<UsersBlock userID={ state.userID } />
+	    		<UsersBlock userID={ state.userID } botUsers={ state.botUsers } />
 	    		<ChatHistory history={ state.history } />
 	    		<ChatInput userID={ state.userID } sendMessage={ sendMessage } />
 	    	</div>
@@ -17,6 +17,7 @@ class App extends React.Component {
 
 	state = {
     userID: Math.round(Math.random() * 100),
+    botUsers: [1000, 2000, 3000],
     history: [],
   };
   sendMessage = (message) => this.setState({ 
