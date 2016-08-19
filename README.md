@@ -17,4 +17,4 @@ $ npm run build
 $ npm start
 ```
 
-
+Bot dictionary found in src/ChatInput.js
