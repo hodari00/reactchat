@@ -22,10 +22,12 @@ export default class UsersBlock extends React.Component {
 	                <span>User #{ props.userID }</span>
 	              </span>
 	              {props.botUsers.map(function(users) {
-		            return <span className="chip left">
+		            return <div><span className="chip left">
 	                <img src={ '//robohash.org/' + users + '?set=set2&bgset=bg2&size=70x70' } />
-	                <span>Bot #{ users }</span>
-	              </span>;
+	                <span>User #Bot { users }</span>
+	              </span>
+	              <input type="radio" className="botStatus" name={ 'Bot ' + users } id={ users + '_online' } defaultChecked/><label htmlFor={ users + '_online' }>Online</label><br/>
+		          <input type="radio" className="botStatus" name={ 'Bot ' + users } id={ users + '_offline' } /><label htmlFor={ users + '_offline' }>Offline</label></div>
 		          })}
 
 			</div>
